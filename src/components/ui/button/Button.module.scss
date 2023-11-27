@@ -1,0 +1,43 @@
+@import '@/styles/variables';
+
+.btn {
+	width: 100%;
+	max-width: 176px;
+	padding: 18px 0;
+	border: 1px solid $purple;
+	color: $purple;
+	text-transform: uppercase;
+	transition: all 0.4s ease-in-out;
+
+	&:hover {
+		border-color: $btn-hover;
+		color: $gray;
+	}
+
+	&.auth {
+		max-width: 100%;
+		padding: 15px 0;
+		font-size: 0.875rem;
+		color: #fff;
+		background-color: $purple-light;
+		border: none;
+
+		&:hover {
+			background-color: rgba($purple-light, 0.7);
+		}
+	}
+
+	&.cart {
+		border-color: $btn-hover;
+		color: $gray;
+
+		&:hover {
+			border-color: $purple;
+			color: $purple;
+		}
+	}
+
+	&:disabled {
+		pointer-events: none;
+	}
+}

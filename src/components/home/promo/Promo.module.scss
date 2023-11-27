@@ -1,0 +1,42 @@
+@import '@/styles/variables';
+
+.promo {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 5px;
+
+	width: 100%;
+	max-width: 150px;
+	padding: 0 20px 20px;
+	box-shadow: $box-shadow;
+
+	font-size: 1.125rem;
+	color: $black;
+	text-transform: uppercase;
+
+	position: absolute;
+
+	> img {
+		max-width: 54px;
+	}
+
+	&.purple_light {
+		height: 224px;
+		background-color: $purple-light;
+		top: calc(0% + 79px);
+		left: 94%;
+	}
+
+	&.pink {
+		padding-right: 60px;
+		height: 293px;
+		background-color: $pink;
+		top: calc(0% + 359px);
+		left: calc(100% + 23px);
+	}
+
+	@media (max-width: 1150px) {
+		display: none;
+	}
+}

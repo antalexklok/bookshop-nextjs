@@ -1,0 +1,9 @@
+.rating {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 16px;
+
+	> div:last-child {
+		font-weight: 400;
+	}
+}

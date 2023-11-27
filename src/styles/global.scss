@@ -1,0 +1,36 @@
+@import './reset';
+@import './variables';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 0.625rem;
+	font-weight: 700;
+	line-height: 1.2;
+	color: $gray;
+	overflow-x: hidden;
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	padding: 0 160px;
+	margin: 0 auto;
+	transition: padding 0.4s ease-in-out;
+
+	@media (max-width: 1280px) {
+		padding: 0 80px;
+	}
+
+	@media (max-width: 960px) {
+		padding: 0 40px;
+	}
+
+	@media (max-width: 678px) {
+		padding: 0 20px;
+	}
+}

@@ -1,0 +1,57 @@
+@import '@/styles/variables';
+
+.categories {
+	padding: 45px 140px 80px 80px;
+	background-color: $white;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	> ul {
+		display: flex;
+		flex-direction: column;
+		gap: 23px;
+
+		> li {
+			font-size: 0.75rem;
+			font-weight: 500;
+			position: relative;
+			transition: all 0.4s ease-in-out;
+
+			&:is(.active, :hover) {
+				font-size: 1rem;
+				font-weight: 700;
+				list-style: disc;
+
+				&::marker {
+					color: $purple;
+				}
+
+				> a {
+					color: $black;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1150px) {
+		padding: 30px 80px;
+		width: 100%;
+		overflow-x: auto;
+
+		> ul {
+			flex-direction: row;
+			align-items: center;
+			width: max-content;
+			gap: 30px;
+		}
+	}
+
+	@media (max-width: 960px) {
+		padding: 30px 40px;
+	}
+
+	@media (max-width: 678px) {
+		padding: 30px 30px 30px 34px;
+	}
+}

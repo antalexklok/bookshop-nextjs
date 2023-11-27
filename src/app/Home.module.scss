@@ -1,0 +1,20 @@
+.slider_wrapper {
+	position: relative;
+	margin-bottom: 100px;
+
+	@media (max-width: 860px) {
+		margin-bottom: 50px;
+	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 30px;
+	}
+}
+
+.book_wrapper {
+	margin-bottom: 40px;
+
+	> div {
+		position: relative;
+	}
+}

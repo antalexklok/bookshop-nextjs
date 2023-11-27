@@ -1,0 +1,22 @@
+@import '@/styles/variables';
+
+.shopping_cart {
+	padding: 87px 0 40px;
+	transition: padding 0.4s ease-in-out;
+
+	h1 {
+		margin-bottom: 20px;
+		font-size: 1.5rem;
+		color: $black;
+	}
+
+	@media (max-width: 500px) {
+		padding: 0 0 30px;
+
+		> div:last-child {
+			> button {
+				max-width: 100%;
+			}
+		}
+	}
+}

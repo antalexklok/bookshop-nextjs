@@ -1,0 +1,115 @@
+@import '@/styles/variables';
+
+.profile {
+	padding: 87px 0 102px;
+	transition: padding 0.4s ease-in-out;
+
+	> div {
+		display: flex;
+		justify-content: space-between;
+
+		.profile_info {
+			width: 45%;
+
+			> h2 {
+				margin-bottom: 12px;
+				font-size: 1.5rem;
+				color: $black;
+				text-transform: uppercase;
+			}
+
+			> div {
+				display: flex;
+				gap: 20px;
+
+				> img {
+					max-width: 235px;
+				}
+
+				> div {
+					color: $black;
+
+					.name {
+						margin-bottom: 25px;
+					}
+
+					h3 {
+						margin-bottom: 10px;
+						font-size: 0.75rem;
+					}
+
+					h2 {
+						font-size: 1.5rem;
+					}
+
+					> button {
+						margin-top: 40px;
+					}
+				}
+			}
+		}
+
+		.profile_about {
+			width: 100%;
+			max-width: 413px;
+			height: 360px;
+			padding: 20px 60px 0;
+			text-align: center;
+			background-color: $pink-light;
+			box-shadow: $box-shadow;
+			font-size: 0.75rem;
+			transition: all 0.4s ease-in-out;
+
+			> h3 {
+				margin-bottom: 30px;
+				color: $black;
+			}
+
+			> p {
+				font-weight: 600;
+			}
+		}
+
+		@media (max-width: 860px) {
+			flex-wrap: wrap;
+			gap: 30px;
+
+			.profile_info {
+				width: 100%;
+			}
+
+			.profile_about {
+				max-width: 100%;
+				height: max-content;
+				padding: 20px 60px 40px;
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		padding: 0 0 30px;
+
+		> div {
+			.profile_info {
+				> div {
+					flex-wrap: wrap;
+
+					> img {
+						max-width: 100%;
+						height: 300px;
+					}
+
+					> div {
+						> button {
+							max-width: 100%;
+						}
+					}
+				}
+			}
+
+			.profile_about {
+				padding: 20px 30px 40px;
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+@import '@/styles/variables';
+
+.header {
+	padding: 40px 0;
+	transition: padding 0.4s ease-in-out;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 10;
+
+		.logo {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			> button {
+				display: none;
+				width: 24px;
+				height: 24px;
+				padding: 2px;
+
+				> svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			> h1 {
+				font-size: 1.5rem;
+				color: $black;
+				cursor: pointer;
+			}
+		}
+
+		.nav {
+			> ul {
+				display: flex;
+				gap: 40px;
+
+				> li {
+					text-transform: uppercase;
+					transition: all 0.4s ease-in-out;
+
+					&:is(:hover, .active) {
+						color: $black;
+						font-weight: 900;
+					}
+
+					&.active {
+						pointer-events: none;
+					}
+				}
+			}
+
+			&.show {
+				display: block;
+			}
+		}
+	}
+
+	@media (max-width: 860px) {
+		.wrapper {
+			.logo {
+				> button {
+					display: inline-block;
+				}
+			}
+
+			.nav {
+				display: none;
+				background-color: #fff;
+				position: absolute;
+				top: calc(100% + 10px);
+
+				> ul {
+					flex-direction: column;
+					gap: 10px;
+					padding: 10px;
+
+					> li {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		padding: 30px 0;
+	}
+}
